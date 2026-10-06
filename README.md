@@ -18,3 +18,21 @@ docker run -d \
   -e POSTGRES_DB=demo \
   postgres:16-alpine
 ```
+
+## 2. Manipulation de la base de données
+Création d'une table et insertion de données via psql dans le conteneur :
+
+```bash
+docker exec -it demo-db psql -U demo -d demo
+```
+Commandes SQL exécutées :
+```sql
+CREATE TABLE products (id serial primary key, name text, price_cents int);
+INSERT INTO products (name, price_cents) VALUES ('Sticker Démo', 150);
+```
+
+## 3. Nettoyage
+Arrêt et suppression du conteneur une fois les manipulations terminées :
+```bash
+docker stop demo-db && docker rm demo-db
+```
