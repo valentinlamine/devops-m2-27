@@ -1,0 +1,9 @@
+--- Sortie de docker image ls ---
+IMAGE                         ID             DISK USAGE   CONTENT SIZE   EXTRA
+valentinlamine/demo-api:1.0   60ac500c2fc8        246MB         63.1MB        
+
+--- Preuve du cache (RUN npm ci) ---
+#6 CACHED
+#7 CACHED
+#8 [4/5] RUN npm ci --omit=dev
+#8 CACHED
