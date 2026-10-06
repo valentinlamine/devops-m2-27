@@ -36,3 +36,6 @@ Arrêt et suppression du conteneur une fois les manipulations terminées :
 ```bash
 docker stop demo-db && docker rm demo-db
 ```
+
+## Solution du challenge
+Les résultats de la requête `\dt`, `SELECT * FROM products;` et des logs du conteneur sont stockés dans le fichier `solution.txt` fourni dans ce dépôt, ce qui correspond exactement au livrable attendu.
